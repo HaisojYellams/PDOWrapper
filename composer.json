@@ -1,0 +1,20 @@
+{
+  "name": "haisoj/pdo-wrapper",
+  "description": "A wrapper for PHP's PDO that allows for less cumbersome calls.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Josiah Smalley",
+      "email": "haisoj.yellams@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "PDOWrapper\\": "src/"
+    }
+  }
+}
