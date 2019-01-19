@@ -3,6 +3,7 @@
   "description": "A wrapper for PHP's PDO that allows for less cumbersome calls.",
   "type": "library",
   "license": "MIT",
+  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Josiah Smalley",
