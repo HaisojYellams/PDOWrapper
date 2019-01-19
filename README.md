@@ -1,2 +1,2 @@
 # PDOWrapper
-A wrapper for PHP's PDO that allows for less cumbersome calls in certain situations.
+A wrapper for PHP's PDO that allows for somewhat less cumbersome calls in certain situations.
