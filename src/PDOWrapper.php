@@ -131,7 +131,7 @@ class PDOWrapper
             } else {
                 $result = $statement->fetch($fetchType, $cursorOrientation, $cursorOffset);
                 $statement->closeCursor();
-                if ($fetchOptions["sanitize"] ?? true) {
+                if (is_array($result) && ($fetchOptions["sanitize"] ?? true)) {
                     $result = static::sanitizeArray($result);
                 }
 
@@ -174,7 +174,7 @@ class PDOWrapper
                 while (
                 $result = $statement->fetch($fetchType, $cursorOrientation, $cursorOffset)
                 ) {
-                    if ($fetchOptions["sanitize"] ?? true) {
+                    if (is_array($result) && ($fetchOptions["sanitize"] ?? true)) {
                         $result = static::sanitizeArray($result);
                     }
 
@@ -219,7 +219,7 @@ class PDOWrapper
             } else {
                 $result = $statement->fetchAll($fetchType);
                 $statement->closeCursor();
-                if ($fetchOptions["sanitize"] ?? true) {
+                if (is_array($result) && ($fetchOptions["sanitize"] ?? true)) {
                     $result = static::sanitize2DArray($result);
                 }
 
